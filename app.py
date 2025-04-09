@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 import os #Vai ser útil para a criação de pastas a serem adicionadas como upload (para as imagens)
 import pymysql #Importa a biblioteca do pymysql (explicação e pesquisa completa no readme)
-from werkzeug.utils import secure_filename
+from werkzeug.utils import secure_filename #É pra conseguir manipular e 
 
 app = Flask(__name__)
 
