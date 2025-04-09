@@ -32,7 +32,7 @@
                     <h2 class="text-xl font-bold">{{ tarefa.nome }}</h2>
                     <p>{{ tarefa.descricao }}</p>
                     <p>Prioridade: {{ tarefa.prioridade }}</p>
-                    <p>Status: {{ tarefa.concluida }}</p>
+                    <p>Finalizado: {{ tarefa.concluida }}</p>
                     {% if tarefa.imagem %}
                         <img src="{{ url_for('static', filename=tarefa.imagem) }}" alt="Imagem da Tarefa" class="w-24 h-24">
                     {% endif %}
