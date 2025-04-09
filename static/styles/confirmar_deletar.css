@@ -15,9 +15,9 @@ body {
     margin: auto;
     padding: 2rem;
     background-color: #ffffff;
-    border-radius: 1rem;
+    border-radius: 2px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    margin-top: 5rem;
+    margin-top: 20px;
 }
 
 h1 {
@@ -41,13 +41,13 @@ strong {
 
 form {
     text-align: center;
-    margin-bottom: 1rem;
+    
 }
 
 button {
-    background-color: #ef4444;
+    background-color: #40E0D0;
     color: white;
-    padding: 0.75rem 1.5rem;
+    padding: 16px;
     font-size: 1rem;
     border: none;
     border-radius: 0.5rem;
@@ -56,7 +56,7 @@ button {
 }
 
 button:hover {
-    background-color: #dc2626;
+    background-color: #3b6a69;
 }
 
 a {
