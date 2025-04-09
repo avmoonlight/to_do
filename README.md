@@ -2,7 +2,7 @@ O projeto oferecido pelo professor propõe uma implementação Web Service de um
 
 # Banco de dados:
 
-Para funcionar na nossa aplicação, o banco de dados deverá ser criado nesse modelo, lembrando que para esse código só funciona o MySQL workbench:
+Para funcionar na nossa aplicação, o banco de dados deverá ser criado nesse modelo, lembrando que para esse código só funciona o MySQL workbenchn (Lembre-se do arquivo ter o nome to_do):
 
 ```sql
 CREATE DATABASE to_do;
