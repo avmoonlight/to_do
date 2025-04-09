@@ -39,7 +39,7 @@ Ou [clique aqui](http://127.0.0.1:5000/tarefas).
 
 ### Possíveis erros:
 
-1. Erro pelo database não estar criado ou inegrado:
+1. Erro pelo database não estar criado ou integrado:
     
     ![image.png](attachment:94a6e586-578b-481e-b835-e508039c9682:image.png)
     
