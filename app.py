@@ -26,6 +26,10 @@ def get_db_connection():
         cursorclass=pymysql.cursors.DictCursor
     )
 
+@app.route('/')
+def index():
+    return render_template('index.html')
+
 @app.route('/tarefas', methods=['GET', 'POST'])
 def tarefas():
     conn = get_db_connection()
