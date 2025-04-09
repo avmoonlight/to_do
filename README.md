@@ -19,6 +19,7 @@ CREATE TABLE tarefas (
 );
 ```
 
+Para startar seu banco de dados, será necessário obter o aplicativo xampp, e lá startar seu banco de dados para criar a conexão. 
 ---
 
 # Integração Front e Back end:
@@ -48,7 +49,9 @@ Ou [clique aqui](http://127.0.0.1:5000/tarefas).
     1. Tente startar seu banco de dados, pelo xampp;
     2. Certifique-se que foi criado o banco de dados e que ele está integrado no código app.py;
     3. Certifique-se de que está integrado.
-
+2. Erro de não execução:
+    1. Caso dê esse erro, certifique-se de que a venv esteja criada, para isso, digite a tecla [ctrl + shift + "] e digite: Python -m venv venv, e lá dentro instale as bibliotecas que serão explicadas a baixo.
+    2. Caso dê erro, pode ser que seja por conta de que não foram instaladas as bibliotecas, para isso, pesquise acesse o site de cada uma das bibliotecas destacado abaixo. 
 ------------------------------------------------------------------------------------------------------------------
 
 # Pesquisa projeto To_do
