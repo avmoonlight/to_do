@@ -13,7 +13,7 @@
     <h1>Editar Tarefa</h1>
     <form action="/editar/{{ tarefa.id }}" method="POST" enctype="multipart/form-data">
       <label>Nome da Tarefa</label>
-      <input type="text" name="nome" value="{{ tarefa.nome }}" required>
+      <input type="text" name="nome" class="comand" value="{{ tarefa.nome }}" required>
       <label>Descrição da Tarefa</label>
       <textarea name="descricao" required>{{ tarefa.descricao }}</textarea>
       <label>Prioridade</label>
