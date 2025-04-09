@@ -14,16 +14,16 @@ body {
     max-width: 400px;
     margin: auto;
     padding: 40px;
-    background-color: #9a6cc0;
+    background-color: #ffffff;
     border-radius: 2px;
     margin-top: 20px;
 }
 
 h1 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: bold;
-    color: #1f2937;
+    color: rgb(163, 0, 239);
     margin-bottom: 24px;
 }
 
@@ -59,7 +59,7 @@ button:hover {
 a {
     display: block;
     text-align: center;
-    color: #2563eb;
+    color: rgb(163, 0, 239);
     font-size: 16px;
     margin-top: 16px;
     text-decoration: none;
