@@ -21,10 +21,10 @@ body {
       color: #333;
     }
 
-.comand{
-    width: 100%;
-    padding: 12px 14px;
-    margin-bottom: 20px;
+    .input-estilizado {
+        width: 100%;
+        padding: 12px 7px;
+        margin-bottom: 20px;
         border: 1px solid #bbb;
         border-radius: 8px;
         background-color: #fdfdfd;
@@ -32,12 +32,13 @@ body {
         transition: border 0.3s ease, box-shadow 0.3s ease;
       }
       
-      .comand:focus {
+    .input-estilizado:focus {
         border-color: #007BFF;
         box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
         outline: none;
-      }
+    }
       
+
     textarea {
       resize: vertical;
       min-height: 100px;
@@ -66,7 +67,7 @@ body {
     }
 
     button {
-      background-color: #007BFF;
+      background-color: aquamarine;
       color: white;
       padding: 10px 16px;
       border: none;
@@ -93,5 +94,6 @@ body {
     }
 
     .corp {
-        background-color: aquamarine;
+       background-color: rgba(55, 65, 81, 0.578);
+       color: rgba(163, 0, 239, 0.767);
     }

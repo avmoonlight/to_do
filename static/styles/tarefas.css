@@ -3,7 +3,15 @@ header {
     color:white;
     text-align: center;
 }
+
 body{
     margin: 0%;
     padding: 0%;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 4px;
 }

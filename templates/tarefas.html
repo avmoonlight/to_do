@@ -8,12 +8,12 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/tarefas.css')}}">
    {%endblock%}
 </head>
-<body class="bg-gray-100">
-    <div class="container mx-auto p-4">
-        <header> <h1 class="text-3xl font-bold text-center mb-6">Lista de Tarefas</h1></header>
+<body >
+    <div>
+        <header> <h1>Lista de Tarefas</h1></header>
         
         
-        <form action="/tarefas" method="POST" enctype="multipart/form-data" class="mb-6">
+        <form action="/tarefas" method="POST" enctype="multipart/form-data" class="containe">
             <input type="text" name="nome" placeholder="Nome da Tarefa" class="border p-2 mb-4 w-full" required>
             <textarea name="descricao" placeholder="Descrição da Tarefa" class="border p-2 mb-4 w-full" required></textarea>
             <select name="prioridade" class="border p-2 mb-4 w-full" required>
@@ -28,19 +28,20 @@
             <input type="file" name="imagem" class="border p-2 mb-4">
             <button type="submit" class="bg-blue-500 text-white p-2">Adicionar Tarefa</button>
         </form>
+        
     <!---Aonde aparecem os nomes, descrições e imagens das tarefas-->
         <ul>
             {% for tarefa in tarefas %}
-                <li class="border p-4 mb-4">
-                    <h2 class="text-xl font-bold">{{ tarefa.nome }}</h2>
-                    <p>{{ tarefa.descricao }}</p>
-                    <p>Prioridade: {{ tarefa.prioridade }}</p>
-                    <p>Finalizado: {{ tarefa.concluida }}</p>
+                <li>
                     {% if tarefa.imagem %}
                         <img src="{{ url_for('static', filename=tarefa.imagem) }}" alt="Imagem da Tarefa" class="w-24 h-24">
                     {% endif %}
-                    <a href="/editar/{{ tarefa.id }}" class="text-blue-500">Editar</a> | 
-                    <a href="/deletar/{{ tarefa.id }}" class="text-red-500">Deletar</a>
+                    <h2>{{ tarefa.nome }}</h2>
+                    <p>{{ tarefa.descricao }}</p>
+                    <p>Prioridade: {{ tarefa.prioridade }}</p>
+                    <p>Finalizado: {{ tarefa.concluida }}</p>
+                    <a href="/editar/{{ tarefa.id }}" >Editar</a> | 
+                    <a href="/deletar/{{ tarefa.id }}">Deletar</a>
                 </li>
             {% endfor %}
         </ul>

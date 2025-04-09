@@ -13,15 +13,16 @@
     <h1>Editar Tarefa</h1>
     <form action="/editar/{{ tarefa.id }}" method="POST" enctype="multipart/form-data">
       <label>Nome da Tarefa</label>
-      <input type="text" name="nome" class="comand" value="{{ tarefa.nome }}" required>
+      <input type="text" name="nome" value="{{ tarefa.nome }}" class="input-estilizado" required>
       <label>Descrição da Tarefa</label>
-      <textarea name="descricao" required>{{ tarefa.descricao }}</textarea>
+      <textarea name="descricao" class="input-estilizado" required>{{ tarefa.descricao }}</textarea>
       <label>Prioridade</label>
-      <select name="prioridade" required>
+      <select name="prioridade" class="input-estilizado" required>
         <option>Baixa</option>
         <option>Média</option>
         <option>Alta</option>
       </select>
+
       <label>
         Concluída:
         <input type="checkbox" name="concluida" {% if tarefa.concluida == 'sim' %}checked{% endif %}>
@@ -34,7 +35,7 @@
       </div>
       {% endif %}
 
-      <input type="file" name="imagem">
+      <input type="file" name="imagem" class="input-estilizado">
       <button type="submit">Salvar Alterações</button>
     </form>
     <a href="/tarefas" class="back-link">Voltar para a Lista de Tarefas</a>
