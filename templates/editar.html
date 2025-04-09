@@ -13,11 +13,11 @@
     <h1>Editar Tarefa</h1>
     <form action="/editar/{{ tarefa.id }}" method="POST" enctype="multipart/form-data">
       <label>Nome da Tarefa</label>
-      <input type="text" name="nome" value="{{ tarefa.nome }}" class="input-estilizado" required>
+      <input type="text" name="nome" value="{{ tarefa.nome }}" class="base_informacao" required>
       <label>Descrição da Tarefa</label>
-      <textarea name="descricao" class="input-estilizado" required>{{ tarefa.descricao }}</textarea>
+      <textarea name="descricao" class="base_informacao" required>{{ tarefa.descricao }}</textarea>
       <label>Prioridade</label>
-      <select name="prioridade" class="input-estilizado" required>
+      <select name="prioridade" class="base_informacao" required>
         <option>Baixa</option>
         <option>Média</option>
         <option>Alta</option>
@@ -29,16 +29,16 @@
       </label>
 
       {% if tarefa.imagem %}
-      <div class="image-preview">
+      <div class="imagex">
         <p>Imagem Atual:</p>
         <img src="{{ url_for('static', filename=tarefa.imagem) }}" alt="Imagem da Tarefa">
       </div>
       {% endif %}
 
-      <input type="file" name="imagem" class="input-estilizado">
+      <input type="file" name="imagem" class="ullian">
       <button type="submit">Salvar Alterações</button>
     </form>
-    <a href="/tarefas" class="back-link">Voltar para a Lista de Tarefas</a>
+    <a href="/tarefas" class="voltab">Voltar para a Lista de Tarefas</a>
   </div>
 </body>
 </html>

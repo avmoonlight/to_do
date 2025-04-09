@@ -21,7 +21,7 @@ body {
       color: #333;
     }
 
-    .input-estilizado {
+    .base_informacao{
         width: 100%;
         padding: 12px 7px;
         margin-bottom: 20px;
@@ -32,7 +32,7 @@ body {
         transition: border 0.3s ease, box-shadow 0.3s ease;
       }
       
-    .input-estilizado:focus {
+    .ullian:focus {
         border-color: #007BFF;
         box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
         outline: none;
@@ -55,11 +55,11 @@ body {
       transform: scale(1.2);
     }
 
-    .image-preview {
+    .imagex {
       margin: 16px 0;
     }
 
-    .image-preview img {
+    .imagex img {
       width: 96px;
       height: 96px;
       object-fit: cover;
@@ -81,7 +81,7 @@ body {
       background-color: #0056b3;
     }
 
-    .back-link {
+    .voltab {
       display: block;
       margin-top: 20px;
       text-align: center;
@@ -89,7 +89,7 @@ body {
       text-decoration: none;
     }
 
-    .back-link:hover {
+    .voltab:hover {
       text-decoration: underline;
     }
 
