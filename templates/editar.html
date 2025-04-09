@@ -3,25 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Editar Tarefa</title>
-</head>
-<body>
-  <div class="container">
-    <h1>Editar Tarefa</h1>
+  {% block link %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/editar.css') }}">
+  {% endblock %}
 
+</head>
+<body class="corp">
+    <div class="container">
+    <h1>Editar Tarefa</h1>
     <form action="/editar/{{ tarefa.id }}" method="POST" enctype="multipart/form-data">
       <label>Nome da Tarefa</label>
       <input type="text" name="nome" value="{{ tarefa.nome }}" required>
-
       <label>Descrição da Tarefa</label>
       <textarea name="descricao" required>{{ tarefa.descricao }}</textarea>
-
       <label>Prioridade</label>
       <select name="prioridade" required>
-        <option value="Baixa" {% if tarefa.prioridade == 'Baixa' %}selected{% endif %}>Baixa</option>
-        <option value="Média" {% if tarefa.prioridade == 'Média' %}selected{% endif %}>Média</option>
-        <option value="Alta" {% if tarefa.prioridade == 'Alta' %}selected{% endif %}>Alta</option>
+        <option>Baixa</option>
+        <option>Média</option>
+        <option>Alta</option>
       </select>
-
       <label>
         Concluída:
         <input type="checkbox" name="concluida" {% if tarefa.concluida == 'sim' %}checked{% endif %}>
