@@ -1,83 +1,116 @@
-header {
-    background-color: #4626cf;
-    color:white;
-    text-align: center;
-}
-
-body{
-    background-color: #f6dcff;
-    margin: 0%;
-    padding: 0%;
-}
-
-.container{
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #dce8ff;
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-items: left;
-    border-radius: 4px;
-    padding:12px;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
 }
 
-.botao{
-    background-color: #3b1ee0;
+.pagina {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.titulo {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.formulario-tarefa {
+    background-color: #5a5a5a;
+    border-radius: 16px;
+    padding: 24px;
     color: white;
-    padding: 12px;
-    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+.campo {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
     border: none;
     border-radius: 8px;
+}
+
+.checkbox-label {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.botao {
+    background-color: #40E0D0;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
     cursor: pointer;
+    font-weight: bold;
+}
+
+.botao:hover {
+    background-color:  #3b6a69;
 }
 
 .lista-tarefas {
     display: flex;
-    gap: 1rem;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
-    flex-wrap: wrap;
 }
 
 .card-tarefa {
-    background-color: #3b1ee0;
-    border-radius: 1rem;
-    padding: 1rem;
-    width: 200px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #9c9c9c;
+    border-radius: 16px;
+    padding: 16px;
+    width: 150px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .imagem-tarefa {
     width: 100%;
-    height: auto;
-    border-radius: 0.5rem;
-    margin-bottom: 0.5rem;
+    border-radius: 12px;
+    margin-bottom: 8px;
 }
 
 .titulo-tarefa {
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
+    font-size: 16px;
+    margin: 4px 0;
+    text-align: center;
 }
 
-.descricao-tarefa,
-.prioridade-tarefa,
-.concluida-tarefa {
-    margin: 0.25rem 0;
-    font-size: 0.95rem;
+.descricao-tarefa, .prioridade-tarefa, .concluida-tarefa {
+    font-size: 14px;
+    text-align: center;
+    margin: 2px 0;
 }
 
 .acoes-tarefa {
-    margin-top: 0.5rem;
+    margin-top: 10px;
+    font-size: 13px;
+    text-align: center;
 }
 
-.link-editar,
-.link-deletar {
-    color: #007bff;
+.link-editar, .link-deletar {
+    color: #0066cc;
     text-decoration: none;
-    font-weight: bold;
+    padding: 10px;
+    border-radius: 3px;
 }
 
-.link-editar:hover,
-.link-deletar:hover {
-    text-decoration: underline;
+.link-deletar {
+    color: #cc0000;
 }

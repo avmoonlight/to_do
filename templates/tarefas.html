@@ -13,40 +13,42 @@
         <header> <h1>Lista de Tarefas</h1></header>
         
         
-        <form action="/tarefas" method="POST" enctype="multipart/form-data" class="container">
-            <input type="text" name="nome" placeholder="Nome da Tarefa" class="border p-2 mb-4 w-full" required>
-            <textarea name="descricao" placeholder="Descrição da Tarefa" class="border p-2 mb-4 w-full" required></textarea>
-            <select name="prioridade" class="border p-2 mb-4 w-full" required>
+        <!-- Formulário -->
+        <form action="/tarefas" method="POST" enctype="multipart/form-data" class="formulario-tarefa">
+            <input type="text" name="nome" placeholder="Nome da Tarefa" class="campo" required>
+            <textarea name="descricao" placeholder="Descrição da Tarefa" class="campo" required></textarea>
+            <select name="prioridade" class="campo" required>
                 <option value="Baixa">Baixa</option>
                 <option value="Média">Média</option>
                 <option value="Alta">Alta</option>
             </select>
-            <label>
+            <label class="checkbox-label">
                 Concluída:
                 <input type="checkbox" name="concluida">
             </label>
-            <input type="file" name="imagem" class="border p-2 mb-4">
+            <input type="file" name="imagem" class="campo">
             <button type="submit" class="botao">Adicionar Tarefa</button>
         </form>
-        
-    <!---Aonde aparecem os nomes, descrições e imagens das tarefas-->
-    <ul class="lista-tarefas">
-        {% for tarefa in tarefas %}
-            <li class="card-tarefa">
-                {% if tarefa.imagem %}
-                    <img src="{{ url_for('static', filename=tarefa.imagem) }}" alt="Imagem da Tarefa" class="imagem-tarefa">
-                {% endif %}
-                <h2 class="titulo-tarefa">{{ tarefa.nome }}</h2>
-                <p class="descricao-tarefa">{{ tarefa.descricao }}</p>
-                <p class="prioridade-tarefa">Prioridade: {{ tarefa.prioridade }}</p>
-                <p class="concluida-tarefa">Finalizado: {{ tarefa.concluida }}</p>
-                <div class="acoes-tarefa">
-                    <a href="/editar/{{ tarefa.id }}" class="link-editar">Editar</a> | 
-                    <a href="/deletar/{{ tarefa.id }}" class="link-deletar">Deletar</a>
-                </div>
-            </li>
-        {% endfor %}
-    </ul>
+
+        <!-- Lista de Tarefas -->
+        <ul class="lista-tarefas">
+            {% for tarefa in tarefas %}
+                <li class="card-tarefa">
+                    {% if tarefa.imagem %}
+                        <img src="{{ url_for('static', filename=tarefa.imagem) }}" alt="Imagem da Tarefa" class="imagem-tarefa">
+                    {% endif %}
+                    <h2 class="titulo-tarefa">{{ tarefa.nome }}</h2>
+                    <p class="descricao-tarefa">{{ tarefa.descricao }}</p>
+                    <p class="prioridade-tarefa">Prioridade: {{ tarefa.prioridade }}</p>
+                    <p class="concluida-tarefa">Finalizado: {{ tarefa.concluida }}</p>
+                    <div class="acoes-tarefa">
+                        <a href="/editar/{{ tarefa.id }}" class="link-editar">Editar</a> | 
+                        <a href="/deletar/{{ tarefa.id }}" class="link-deletar">Deletar</a>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
     
 </body>
 </html>

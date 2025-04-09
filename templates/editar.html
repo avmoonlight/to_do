@@ -25,7 +25,7 @@
 
       <label>
         Concluída:
-        <input type="checkbox" name="concluida" {% if tarefa.concluida == 'sim' %}checked{% endif %}>
+        <input type="checkbox" class="verifica" name="concluida" {% if tarefa.concluida == 'sim' %}checked{% endif %}>
       </label>
 
       {% if tarefa.imagem %}
