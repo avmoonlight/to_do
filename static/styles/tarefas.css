@@ -12,6 +12,60 @@ body{
 .container{
     display: flex;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
+    justify-items: center;
     border-radius: 4px;
+}
+
+.lista-tarefas {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.card-tarefa {
+    background-color: #4ee4ea;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.imagem-tarefa {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.titulo-tarefa {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.descricao-tarefa,
+.prioridade-tarefa,
+.concluida-tarefa {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+}
+
+.acoes-tarefa {
+    margin-top: 0.5rem;
+}
+
+.link-editar,
+.link-deletar {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-editar:hover,
+.link-deletar:hover {
+    text-decoration: underline;
 }
