@@ -11,8 +11,7 @@
 <body >
     <div>
         <header> <h1>Lista de Tarefas</h1></header>
-        
-        
+        <br>
         <!-- Formulário -->
         <form action="/tarefas" method="POST" enctype="multipart/form-data" class="formulario-tarefa">
             <input type="text" name="nome" placeholder="Nome da Tarefa" class="campo" required>
@@ -31,7 +30,7 @@
         </form>
 
         <!-- Lista de Tarefas -->
-        <ul class="lista-tarefas">
+        <ul class="lista-tarefas"> 
             {% for tarefa in tarefas %}
                 <li class="card-tarefa">
                     {% if tarefa.imagem %}
